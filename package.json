@@ -1,31 +1,18 @@
 {
-  "name": "backend",
+  "name": "backEnd",
   "version": "1.0.0",
-  "description": "Mern Backend",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheScendant/mernBackEnd.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TheScendant/mernBackEnd/issues"
-  },
-  "homepage": "https://github.com/TheScendant/mernBackEnd#readme",
-  "devDependencies": {
+  "main": "index.js",
+  "repository": "https://github.com/TheScendant/mernBackEnd.git",
+  "author": "hmn8929 <hayden518@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "body-parser": "^1.18.3",
-    "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "mongoose": "^5.1.3",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.17.5"
+    "morgan": "^1.9.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node --presets babel-preset-env"
   }
 }
