@@ -22,6 +22,11 @@ router.get('/', (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 
+router.get('/hayden', (req, res) => {
+  res.json({ message: 'Hello, Hayden!' });
+});
+
+
 // Use our router configuration when we call /api
 app.use('/api', router);
 
