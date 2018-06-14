@@ -22,10 +22,14 @@ router.get('/', (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 
-router.get('/hayden', (req, res) => {
-  res.json({ message: 'Hello, Hayden!' });
+router.post('/hayden', function (req, res) {
+  console.warn(req.body);
+  if (req.body.username === "hayden" && req.body.password === "nier") {
+    res.send({"loggedIn": true});
+  } else {
+    res.send({"loggedIn": false});
+  }
 });
-
 
 // Use our router configuration when we call /api
 app.use('/api', router);
