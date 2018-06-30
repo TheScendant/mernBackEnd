@@ -5,6 +5,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
+import eventSchema from './models/Event'
 
 // and create our instances
 const app = express();
@@ -25,9 +26,9 @@ router.get('/', (req, res) => {
 router.post('/hayden', function (req, res) {
   console.warn(req.body);
   if (req.body.username === "hayden" && req.body.password === "nier") {
-    res.send({"loggedIn": true});
+    res.json({"loggedIn": true});
   } else {
-    res.send({"loggedIn": false});
+    res.json({"loggedIn": false});
   }
 });
 
